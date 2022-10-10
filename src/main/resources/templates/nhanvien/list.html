@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table class="table">
+    <thead>
+    <tr >
+        <th>Id</th>
+        <th>Ma</th>
+        <th>Ho</th>
+        <th> Ten Dem</th>
+        <th> Ten </th>
+        <th>Gioi tinh</th>
+        <th>Ngay sinh</th>
+        <th>Dia chi</th>
+        <th> Sđt</th>
+        <th> Mat khau</th>
+        <th> Trang Thai</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="list:${list}">
+
+        <td th:text="${list.Id}" />
+        <td th:text="${list.Ma}" />
+        <td th:text="${list.ho}" />
+        <td th:text="${list.tendem}" />
+        <td th:text="${list.Ten}" />
+        <td th:text="${list.gioitinh}" />
+        <td th:text="${list.ngaysinh}" />
+        <td th:text="${list.diachi}" />
+        <td th:text="${list.sdt}" />
+        <td th:text="${list.matkhau}" />
+        <td th:text="${list.trangthai}" />
+
+        <td colspan="2">
+            <a th:href="@{'/edit/'+${list.Id}}">Sửa</a>
+            <a th:href="@{'/delete/'+${list.Id}}">Xóa</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<form th:action="${ACTION}"  th:object="${nhanVien}"  method="post">
+  <input hidden type="text" th:field="*{Id}" name="Ma" >
+  <a>Mã</a>
+  <input type="text" th:field="*{Ma}" name="Ma" >
+  <a>Họ</a>
+  <input type="text" th:field="*{ho}" name="Ten">
+  <a>Tên Đệm</a>
+  <input type="text" th:field="*{tendem}" name="Ten">
+  <a>Tên</a>
+  <input type="text" th:field="*{Ten}" name="Ten">
+  <a>Dia chi</a>
+  <input type="text" th:field="*{diachi}" name="Ten">
+  <a>Sđt</a>
+  <input type="text" th:field="*{sdt}" name="Ten">
+  <a>Ngày sinh</a>
+  <input type="text" th:field="*{ngaysinh}" name="Ten">
+  <a>Trang Thái</a>
+  <input type="text" th:field="*{trangthai}" name="Ten">
+  <a>Mật khẩu</a>
+  <input type="text" th:field="*{matkhau}" name="Ten">
+  <a>Giới tính</a>
+  <input type="text" th:field="*{gioitinh}" name="Ten">
+  <button type="submit" >Them Moi</button>
+</form>
+</body>
+</html>
