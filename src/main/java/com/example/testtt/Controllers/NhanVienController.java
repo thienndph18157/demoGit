@@ -18,12 +18,12 @@ public class NhanVienController {
     @Autowired
     public NhanVienReposiory nhanVienReposiory;
 
-
     @GetMapping("/listnv")
     public String  list(Model model){
         List<NhanVien> list = nhanVienReposiory.findAll();
         System.out.println(list);
         model.addAttribute("list",list);
+        //tbh
         return "nhanvien/list";
     }
     @GetMapping("/createnv")
